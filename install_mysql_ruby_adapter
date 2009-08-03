@@ -4,7 +4,7 @@ echo "*** DOWNLOADING SOURCE -- JUST IGNORE THE COMPILE ERROR ***"
 gem sources -a http://gems.github.com
 sudo gem install kwatch-mysql-ruby
 
-GEM_SRC="$(which gem |sed 's/\/\w*\/\w*$/\/lib\/ruby\/gems\/1.9.1\/gems/')"
+GEM_SRC="$(which gem |sed 's/\/\w*\/\w*$/\/lib\/ruby1.9\/gems\/1.9.1\/gems/')"
 
 echo ""
 echo "*** FIXING the ERROR ***"
@@ -15,7 +15,7 @@ echo ""
 echo "*** RECOMPILING ***"
 
 # Build and install the gem.
-cd /usr/local/lib/ruby/gems/1.9.1/gems/kwatch-mysql-ruby-2.8.1
+cd /opt/local/lib/ruby1.9/gems/1.9.1/gems/kwatch-mysql-ruby-2.8.1
 sudo gem build mysql-ruby.gemspec
 
 echo ""
